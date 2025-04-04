@@ -1,19 +1,16 @@
-# Ejercicio 2: Módulo de ordenamiento
-
 import models.order as mod_ord
 
 class OrderDao:
-    """DAO para manejar operaciones de ordenamiento"""
-    
+    """Clase para gestionar el ordenamiento de listas"""    
     def __init__(self):
-        self.algorithm = mod_ord.BubbleSort()  # Acceso mediante el alias
+        self.algorithm = mod_ord.BubbleSort()
         self.browsing = []
     
     def sort_list(self, list, ascendant=True):
         result = self.algorithm.order(list.copy(), ascendant=ascendant)
         self.browsing.append({
-            'lista_original': list.copy(),
-            'lista_ordenada': result,
+            'Original': list.copy(),
+            'Ordenada': result,
             'ascendente': ascendant,
             'algoritmo': self.algorithm.nombre
         })

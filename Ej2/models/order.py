@@ -1,21 +1,17 @@
-# Ejercicio #2: Módulo de ordenamiento Se requiere que los estudiantes diseñen un módulo independiente que contenga implementaciones de algoritmos de ordenamiento simples (bubble sort). El objetivo es que, a partir de una función principal, se invoquen los métodos del módulo para ordenar una lista de números y demostrar la correcta separación de responsabilidades, fomentando la modularidad y la reutilización del código.
-
 class sortAlgorithm:
-    """Clase base para algoritmos de ordenamiento"""
-    
+    """Clase abstracta para los algoritmos de ordenamiento"""    
     def __init__(self, nombre):
         self.nombre = nombre
     
     def order(self, list, ascendant=True):
-        raise NotImplementedError("Método abstracto")
+        raise NotImplementedError("Abstracto")
     
     def show_list(self, list, message="Lista:"):
         print(f"{message} {', '.join(map(str, list))}")
 
 
 class BubbleSort(sortAlgorithm):
-    """Implementación concreta de Bubble Sort"""
-    
+    """Clase para el algoritmo de ordenamiento Bubble Sort"""  
     def __init__(self):
         super().__init__("Bubble Sort")
     

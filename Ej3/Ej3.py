@@ -11,14 +11,14 @@ def main():
     print("-" * 30)
     print("Algoritmos de Búsqueda")
     print("-" * 30)
-    data = list(map(int, input("Ingrese una lista de números separados por espacios: ").replace(',', ' ').split()))
+    data = list(map(int, input("Añada números separados por espacios: ").replace(',', ' ').split()))
     target = int(input("Ingrese el número a buscar: "))
     sorted_data = sorted(data)
     
     print(f"\nLista de numeros: {data}")
     print(f"Numero a buscar: {target}\n")
     
-    print("Posición por búsqueda Lineal:")
+    print("Posición de búsqueda Lineal:")
     res = search_dao.search('linear', data, target)
     print(f"Posición: {res}" if res != -1 else "No encontrado")
     

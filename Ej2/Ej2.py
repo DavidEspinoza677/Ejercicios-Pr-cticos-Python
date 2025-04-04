@@ -6,13 +6,13 @@ os.system('cls' if os.name == 'nt' else 'clear')
 
 order_dao = dao.OrderDao()
 
-enter = input("Ingrese una lista de números separados por comas: ")
+enter = input("Añadir números separados por comas: ")
 numbers = list(map(int, enter.split(',')))
 
-order_dao.show_list(numbers, "Lista original:")
+order_dao.show_list(numbers, "Original:")
 
 ascendant = order_dao.sort_list(numbers)
-order_dao.show_list(ascendant, "Orden ascendente:")
+order_dao.show_list(ascendant, "Ascendente:")
 
 descending = order_dao.sort_list(numbers, ascendant=False)
-order_dao.show_list(descending, "Orden descendente:")
+order_dao.show_list(descending, "Descendente:")
